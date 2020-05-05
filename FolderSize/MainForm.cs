@@ -95,22 +95,22 @@ namespace InSoft
         {
             if (Length > 1024 * 1024 * 1024)
             {
-                return (Length / 1024 / 1024 / 1024).ToString("f2") + " GB";
+                return ((double)Length / 1024 / 1024 / 1024).ToString("f2") + " GB";
             }
 
             else if (Length > 1024 * 1024)
             {
-                return (Length / 1024 / 1024).ToString("f2") + " MB";
+                return ((double)Length / 1024 / 1024).ToString("f2") + " MB";
             }
 
             else if (Length > 1024)
             {
-                return (Length / 1024).ToString("f2") + " kB";
+                return ((double)Length / 1024).ToString("f2") + " kB";
             }
 
             else
             {
-                return Length.ToString("f2") + " B";
+                return ((double)Length).ToString("f2") + " B";
             }
         }
 
